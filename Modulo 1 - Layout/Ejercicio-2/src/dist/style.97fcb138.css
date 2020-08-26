@@ -1,0 +1,46 @@
+.box, .shadow, .btn {
+  border: 1px darkgray solid;
+  margin: 1rem;
+  padding: 2rem;
+  width: 80px;
+}
+
+.btn {
+  text-align: center;
+}
+
+.font {
+  margin: 1rem;
+  display: block;
+}
+
+.shadow {
+  display: inline-block;
+}
+
+.base {
+  background-color: red;
+}
+
+.important {
+  background-color: brown;
+}
+
+.warning {
+  background-color: lightgrey;
+}
+
+.main-font {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.secondary-font {
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+.shadow {
+  box-shadow: -10px 12px 25px 0px black;
+  border-radius: 1rem;
+}
+
+/*# sourceMappingURL=/style.97fcb138.css.map */

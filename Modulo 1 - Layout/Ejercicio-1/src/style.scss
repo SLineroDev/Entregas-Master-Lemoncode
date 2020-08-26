@@ -1,0 +1,48 @@
+.box {
+	display: inline-block;
+	padding: 1.5em;
+}
+
+@each $item in red, blue, orange {
+	$concat: '3';
+	@if$item == red {
+		$concat: '1';
+	} @else if$item == blue {
+		$concat: '2';
+	}
+	.container-#{$concat} {
+
+        margin-bottom: 1.1rem;
+
+		.darken-4 {
+			background-color: darken($item, 20%);
+		}
+		.darken-3 {
+			background-color: darken($item, 15%);
+		}
+		.darken-2 {
+			background-color: darken($item, 10%);
+		}
+		.darken-1 {
+			background-color: darken($item, 5%);
+		}
+		.base-color {
+			background-color: $item;
+		}
+		.lighten-1 {
+			background-color: lighten($item, 10%);
+		}
+		.lighten-2 {
+			background-color: lighten($item, 15%);
+		}
+		.lighten-3 {
+			background-color: lighten($item, 25%);
+		}
+		.lighten-4 {
+			background-color: lighten($item, 30%);
+        }
+        .color-box-text{
+			color: complement($color: $item);
+        }
+	}
+}

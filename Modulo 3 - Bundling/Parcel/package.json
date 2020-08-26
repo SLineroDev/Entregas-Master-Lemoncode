@@ -1,0 +1,36 @@
+{
+	"name": "modulo3-parcel",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.tsx",
+	"scripts": {
+		"start": "run-p -l type-check:watch && start:dev",
+		"type-check:watch": "npm run type-check -- --watch",
+		"build:dev": "rimraf dist && parcel ./src/index.html --public-url ./",
+		"build:prod": "rimraf dist && parcel build ./src/index.html --public-url ./",
+		"start:dev": "rimraf dist && parcel ./src/index.html --open",
+		"type-check": "tsc --noEmit"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.10.4",
+		"@babel/preset-react": "^7.10.4",
+		"@babel/preset-typescript": "^7.10.4",
+		"npm-run-all": "^4.1.5",
+		"parcel-bundler": "^1.12.4",
+		"parcel-plugin-bundle-visualiser": "^1.2.0",
+		"postcss-modules": "^3.2.0",
+		"rimraf": "^3.0.2",
+		"sass": "^1.26.3",
+		"typescript": "^3.8.3"
+	},
+	"dependencies": {
+		"@types/node": "^14.6.0",
+		"@types/react": "^16.9.27",
+		"@types/react-dom": "^16.9.5",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1"
+	}
+}

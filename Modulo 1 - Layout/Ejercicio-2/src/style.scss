@@ -1,0 +1,52 @@
+@import './themes/themeA';
+//@import './themes/themeB';
+
+$box-border: 1px darkgray solid;
+$margin: 1rem;
+
+.box {
+	border: $box-border;
+    margin: $margin;
+    padding: 2rem;
+	width: 80px;
+}
+
+.btn {
+    @extend .box;
+	text-align: center;
+}
+
+.font {
+	margin: $margin;
+	display: block;
+}
+
+.shadow {
+    @extend .box;
+	display: inline-block;
+}
+
+.base {
+	background-color: $color-base;
+}
+
+.important {
+	background-color: $color-important;
+}
+
+.warning {
+	background-color: $color-warning;
+}
+
+.main-font {
+    font-family: $main-font;
+}
+
+.secondary-font {
+    font-family: $secondary-font;
+}
+
+.shadow {
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+}
