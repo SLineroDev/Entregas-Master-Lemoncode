@@ -1,0 +1,95 @@
+<div class="gallery-container">
+  <div class="selected-image" *ngIf="selectedImage">
+    <div id="selected-img" [style.width]="selectedImageWidth">
+      <img
+        rotate
+        [step]="30"
+        [src]="selectedImage.src"
+        [alt]="selectedImage.title"
+      />
+    </div>
+
+    <div rotate class="image-controllers-container">
+      <div class="image-controllers-size">
+        <button mat-raised-button (click)="decrease()" color="primary">
+          Disminuir
+        </button>
+        <button mat-raised-button (click)="increase()" color="primary">
+          Aumentar
+        </button>
+      </div>
+      <div class="image-controllers">
+        <button
+          mat-raised-button
+          [disabled]="selectedImage.id == images[0].id"
+          (click)="previous()"
+          color="primary"
+        >
+          Anterior
+        </button>
+        <button
+          mat-raised-button
+          *ngIf="!isPlaying"
+          (click)="play()"
+          color="primary"
+        >
+          Play
+        </button>
+        <button
+          mat-raised-button
+          *ngIf="isPlaying"
+          (click)="stop()"
+          color="warn"
+        >
+          Stop
+        </button>
+        <button
+          mat-raised-button
+          [disabled]="selectedImage.id == images[images.length - 1].id"
+          (click)="next()"
+          color="primary"
+        >
+          Siguiente
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="image-list-container">
+    <div class="image-list">
+      <div
+        class="image-list-item"
+        *ngFor="
+          let image of images | sliceImg: firstPaginatorEl:lastPaginatorEl
+        "
+      >
+        <img
+          class="{{
+            image.id == selectedImage.id ? 'selected-image-list' : ''
+          }}"
+          (click)="selectImage(image); stop()"
+          [src]="image.src"
+          [alt]="image.title"
+        />
+      </div>
+    </div>
+    <div class="paginator-buttons">
+      <button
+        mat-raised-button
+        [disabled]="firstPaginatorEl == 0"
+        (click)="previousList()"
+        color="primary"
+      >
+        Anterior
+      </button>
+      <button
+        mat-raised-button
+        [disabled]="lastPaginatorEl >= images.length"
+        (click)="nextList()"
+        color="primary"
+      >
+        Siguiente
+      </button>
+    </div>
+  </div>
+</div>
