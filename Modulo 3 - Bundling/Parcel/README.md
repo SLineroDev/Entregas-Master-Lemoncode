@@ -4,18 +4,20 @@ Esta es una aplicacion simple para la entrega del modulo 3.
 
 ## Instrucciones
 
--   `npm install`
+- `npm install`
 
-#### Dev-Server
+### Dev-Server
 
--   npm run start`
+- npm run start
+- `npm run start`
 
-#### Build
+### Build
 
--   `npm run build:dev` o `npm run build:prod`
--   Ir a http://localhost:1234
+- `npm run build:dev` o `npm run build:prod`
+- Ir a [localhost:1234](http://localhost:1234)
 
-#### Bundle Analyzer
+### Bundle Analyzer
 
--   `npm run build:prod`
--   Abrir el fichero `dist
+- `npm run build:prod`
+- Abrir el fichero `dist
+- Abrir el fichero `dist/report.html`
