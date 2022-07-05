@@ -28,8 +28,8 @@ export const ConfirmationDialogComponent: React.FunctionComponent<Props> = props
 
   return (
     <Dialog open={isOpen}>
-      <DialogTitle>{title}</DialogTitle>
-      <DialogContent>{children}</DialogContent>
+      <DialogTitle data-testid="title">{title}</DialogTitle>
+      <DialogContent data-testid="children">{children}</DialogContent>
       <DialogActions>
         <Button onClick={onClose} color="secondary" variant="contained">
           {labels.closeButton}
